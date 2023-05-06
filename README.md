@@ -16,7 +16,7 @@ jika anda melakukan pengembangan lakukan pada source folder src
 
 ### Buat .env
 
-pastikan bahwa anda telah menginstall mongod DB di localhost atau anda juga bisa menggunkan atlas CompasDB, lalu buatlah .env di folder bagian package.json
+pastikan bahwa anda telah menginstall mongod DB di localhost atau anda juga bisa menggunkan atlas CompasDB serta me-run database (aktif), lalu buatlah .env di folder bagian package.json
 
 ```
 MONGODB_URI = "mongodb://localhost:27017/dipayDB"  jika menggunakan localhost atau URI atlas
