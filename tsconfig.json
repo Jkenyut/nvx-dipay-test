@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "strict": true,
+    "lib": ["esnext", "es6", "dom"],
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  }
+}
