@@ -1,13 +1,13 @@
 //import all controllers
-import express, { Router } from "express";
-import { combination, countries, fibonacci } from "../controllers/tasks";
-import { createCompanies, getCompanies, activeCompanies } from "../controllers/companies";
+import express, {Router} from "express";
+import {combination, countries, fibonacci} from "../controllers/tasks";
+import {activeCompanies, createCompanies, getCompanies} from "../controllers/companies";
 import {
-  createEmployees,
-  deleteEmployees,
-  updateEmployees,
-  getEmployees,
-  getEmployeesByCompanies,
+    createEmployees,
+    deleteEmployees,
+    getEmployees,
+    getEmployeesByCompanies,
+    updateEmployees,
 } from "../controllers/employees";
 
 //difinition of router
