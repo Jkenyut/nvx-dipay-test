@@ -1,101 +1,132 @@
-# nvx-dipay-test
+# NVX DiPay Test API
 
-## Description
 
-`nvx-dipay-test` is a backend application built with Node.js and TypeScript, designed to demonstrate best practices in
-API development using MongoDB as the database. The project features a modular structure, environment-based
-configuration, and includes scripts for development, testing, and production deployment. It is suitable as a template or
-starting point for scalable Node.js REST API projects.
+<h3 align="center">🚀 A Scalable Node.js & MongoDB Backend Template 🚀</h3>
 
-A Postman collection is provided for easy API testing and documentation.
+<p align="center">
+  A backend template built with Node.js and TypeScript, demonstrating best practices for REST API development with MongoDB.
+</p>
 
-## Table of Contents
+<p align="center">
+  <!-- Badges/Shields -->
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/badge/Node.js-18.x-green?logo=node.js" alt="Node.js">
+  <img src="https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Express-4.x-black?logo=express" alt="Express.js">
+  <img src="https://img.shields.io/badge/MongoDB-6.x-green?logo=mongodb" alt="MongoDB">
+</p>
 
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Environment Setup](#environment-setup)
-- [Running the Project](#running-the-project)
-- [API Documentation](#api-documentation)
-- [Development Notes](#development-notes)
-- [Links](#links)
+---
 
-## Project Structure
+## About The Project
 
-- Source code is located in the `src` folder.
-- Compiled JavaScript files are output to the `build` folder, as specified by the `outDir` option in `tsconfig.json`.
+`nvx-dipay-test` is a backend application designed to serve as a robust starting point for scalable REST API projects. It features a modular structure, environment-based configuration, and a full suite of scripts for development, testing, and production. With a focus on clean code and best practices, it's an ideal template for building powerful Node.js applications.
 
-## Installation
+A Postman collection is provided for easy API testing and exploration.
 
-Install dependencies:
+## 🛠️ Tech Stack
 
-```bash
-npm install
+-   **Runtime:** [Node.js](https://nodejs.org/en/)
+-   **Language:** [TypeScript](https://www.typescriptlang.org/)
+-   **Framework:** [Express.js](https://expressjs.com/)
+-   **Database:** [MongoDB](https://www.mongodb.com/) (with [Mongoose](https://mongoosejs.com/))
+
+## 🚀 Getting Started
+
+Follow these steps to get the project set up and running on your local machine.
+
+### 1. Prerequisites
+
+-   [Node.js](https://nodejs.org/en/) (v18.x or later)
+-   [npm](https://www.npmjs.com/)
+-   A running [MongoDB](https://www.mongodb.com/try/download/community) instance (local or on [Atlas](https://www.mongodb.com/cloud/atlas))
+
+### 2. Installation & Setup
+
+1.  **Clone the repository:**
+    ```
+    git clone [this project]
+    cd project
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Set up Environment Variables:**
+    -   Create a `.env` file in the project's root directory.
+    -   Add your configuration, using `.env.example` as a reference.
+        ```env
+        # .env
+        MONGODB_URI="mongodb://localhost:27017/dipayDB"
+        PORT="3000"
+        ```
+
+### 3. Running the Project
+
+You can run the application in different modes:
+
+-   **Development Mode (with hot-reloading):**
+    ```bash
+    npm run dev
+    ```
+-   **Production Mode:**
+    This command first builds the TypeScript source into JavaScript and then starts the server.
+    ```bash
+    npm start
+    ```
+-   **Running Tests:**
+    ```bash
+    npm run test
+    ```
+
+The API will be available at `http://localhost:3000` (or the port specified in your `.env` file).
+
+## 📂 Project Structure
+
+The source code is located in the `src` folder and is organized by feature for better maintainability.
+
+```
+nvx-dipay-test/
+├── build/                # Compiled JavaScript output (generated)
+├── src/
+│   ├── config/           # Environment configuration
+│   ├── controllers/      # Request handlers and business logic
+│   ├── models/           # Mongoose data models
+│   ├── routes/           # API route definitions
+│   ├── services/         # Services for interacting with the database
+│   ├── utils/            # Utility functions
+│   └── index.ts          # Main application entry point
+├── .env.example          # Example environment variables
+├── package.json
+└── tsconfig.json
 ```
 
-## Environment Setup
+## 📖 API Documentation
 
-1. Make sure MongoDB is running locally or use MongoDB Atlas.
-2. Create a `.env` file in the root directory (same level as `package.json`) with the following content:
+For detailed information on all available endpoints, request/response examples, and to test the API directly, please refer to the Postman collection.
 
-    ```
-    MONGODB_URI="mongodb://localhost:27017/dipayDB" # or your Atlas URI
-    PORT="3000" # default port is 3000
-    ```
+-   [**View Postman Documentation**](https://documenter.getpostman.com/view/3535934/2s93eVXZRu#5c8a7407-f5f0-4407-a839-245cb78c0fe9)
 
-## Running the Project
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/3535934-08018809-7756-42d3-984e-3c726e632e8c?action=collection%2Ffork&source=rip_markdown)
 
-- **Production build and start:**
-  ```bash
-  npm start
-  ```
-- **Run tests:**
-  ```bash
-  npm run test
-  ```
-- **Development mode (with hot reload):**
-  ```bash
-  npm run dev
-  ```
+## 🤝 Contributing
 
-## API Documentation
+Contributions are what make the open-source community an amazing place to learn, create, and inspire. Any contributions you make are **greatly appreciated**.
 
-- [Postman API Documentation](https://documenter.getpostman.com/view/3535934/2s93eVXZRu#5c8a7407-f5f0-4407-a839-245cb78c0fe9)
+1.  **Fork** the repository.
+2.  Create a **Feature Branch** (`git checkout -b feature/AmazingFeature`).
+3.  **Commit** your changes (`git commit -m 'feat: Add some AmazingFeature'`).
+4.  **Push** to the Branch (`git push origin feature/AmazingFeature`).
+5.  Open a **Pull Request**.
 
-## Development Notes
+## 📄 License
 
-- Make all source code changes in the `src` folder.
-- Ensure MongoDB is running before starting the server.
+This project is licensed under the [MIT License](https://opensource.org/license/mit). See the `LICENSE` file for more details.
 
-## Links
+## 📬 Contact
 
-- [GitHub Repository](https://github.com/Jkenyut/test_Dipay)
+**Satria Nur Saputro**
 
-## Contributing
-
-Contributions are highly appreciated! To contribute:
-
-1. Fork this repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-3. Commit your changes with clear messages.
-4. Push your branch:
-   ```bash
-   git push origin feature/your-feature
-   ```
-5. Open a pull request describing your changes.
-
-Please ensure your code adheres to the project's coding standards and includes relevant tests and documentation.
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/license/mit). See the `LICENSE` file for
-details.
-
-## Contact
-
-For questions, suggestions, or feedback, please contact:
-
-**Satria Nur Saputro**  
-Email: [satrianursaputro06@gmail.com](mailto:satrianursaputro06@gmail.com)
+-   Email: [satrianursaputro06@gmail.com](mailto:satrianursaputro06@gmail.com)
